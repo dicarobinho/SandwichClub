@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="width_height_200dp">200dp</dimen>
+    <dimen name="standard_margin">16dp</dimen>
+    <dimen name="half_standard_margin">8dp</dimen>
+    <dimen name="double_standard_margin">32dp</dimen>
+    <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="width_height_35dp">35dp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="text_size_14sp">14sp</dimen>
+    <dimen name="text_size_24sp">24sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="text_size_30sp">30sp</dimen>
+    <dimen name="with_height_30dp">30dp</dimen>
+    <dimen name="width_height_100dp">100dp</dimen>
+    <dimen name="half_half_standard_margin">4dp</dimen>
+    <dimen name="text_size_12sp">12sp</dimen>
+</resources>

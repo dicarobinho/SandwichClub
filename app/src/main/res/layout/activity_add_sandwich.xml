@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        tools:context=".AddSandwichActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_choose_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_height_200dp"
+            android:layout_margin="@dimen/standard_margin"
+            app:cardCornerRadius="@dimen/half_standard_margin"
+            app:cardElevation="@dimen/half_standard_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/width_height_200dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/sandwich_picture_content_description"
+                android:scaleType="centerCrop"
+                android:src="@drawable/add_photo" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_app_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="@dimen/standard_margin"
+                android:onClick="addNewPhoto"
+                android:src="@drawable/ic_camera_yellow"
+                app:backgroundTint="@color/floating_button_back_tint"
+                app:fabSize="auto"
+                app:rippleColor="@color/colorPrimaryLight" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/double_standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:text="@string/name"
+            android:textColor="@color/text_up_field_color"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView_choose_image" />
+
+        <EditText
+            android:id="@+id/edit_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_height_35dp"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/half_standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:background="@drawable/custom_edit_text"
+            android:hint="@string/name_hint"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingStart="@dimen/standard_margin"
+            android:paddingEnd="@dimen/standard_margin"
+            android:textSize="@dimen/text_size_16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/double_standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:text="@string/description"
+            android:textColor="@color/text_up_field_color"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_name" />
+
+        <EditText
+            android:id="@+id/edit_text_description"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_height_35dp"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/half_standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:background="@drawable/custom_edit_text"
+            android:hint="@string/description_hint"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingStart="@dimen/standard_margin"
+            android:paddingEnd="@dimen/standard_margin"
+            android:textSize="@dimen/text_size_16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <TextView
+            android:id="@+id/origin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/double_standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:text="@string/origin"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_description" />
+
+        <EditText
+            android:id="@+id/edit_text_origin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_height_35dp"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/half_standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:background="@drawable/custom_edit_text"
+            android:hint="@string/origin_hint"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingStart="@dimen/standard_margin"
+            android:paddingEnd="@dimen/standard_margin"
+            android:textSize="@dimen/text_size_16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/origin" />
+
+        <TextView
+            android:id="@+id/ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/double_standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:text="@string/ingredients"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_origin" />
+
+        <EditText
+            android:id="@+id/edit_text_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_height_35dp"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/half_standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:background="@drawable/custom_edit_text"
+            android:hint="@string/ingredients_hint"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingStart="@dimen/standard_margin"
+            android:paddingEnd="@dimen/standard_margin"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/ingredients" />
+
+        <TextView
+            android:id="@+id/also_known"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/double_standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:text="@string/alsoKnown"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_ingredients" />
+
+        <EditText
+            android:id="@+id/edit_text_also_known"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_height_35dp"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/half_standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:background="@drawable/custom_edit_text"
+            android:hint="@string/alsoKnown_hint"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingStart="@dimen/standard_margin"
+            android:paddingEnd="@dimen/standard_margin"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/also_known" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_height_35dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/double_standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:background="@drawable/touch_effect_dark_buttons"
+            android:gravity="center"
+            android:onClick="saveSandwich"
+            android:paddingStart="@dimen/standard_margin"
+            android:paddingEnd="@dimen/standard_margin"
+            android:text="@string/save_button"
+            android:textColor="@color/text_up_field_color"
+            android:textSize="@dimen/text_size_16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_also_known" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_margin"
+            app:layout_constraintTop_toBottomOf="@id/save_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

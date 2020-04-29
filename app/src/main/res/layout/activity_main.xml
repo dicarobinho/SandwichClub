@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="@dimen/standard_margin"
+        android:paddingTop="@dimen/standard_margin"
+        android:paddingEnd="@dimen/standard_margin"
+        android:text="@string/menu_text"
+        android:textColor="@color/text_up_field_color"
+        android:textSize="@dimen/text_size_30sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/with_height_30dp"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:gravity="center"
+        android:src="@drawable/under_title"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/standard_margin"
+        tools:context=".MainActivity">
+
+        <com.udacity.sandwichclub.utils.EmptyRecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Empty view is only visible when the list has no items. -->
+
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAppearance="?android:textAppearanceMedium"
+            tools:text="No apps available" />
+
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_app_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/standard_margin"
+            android:onClick="addAppFloatingActionButton"
+            android:src="@drawable/add_black"
+            app:rippleColor="@color/colorPrimaryLight"
+            app:fabSize="auto" />
+
+    </RelativeLayout>
+</LinearLayout>

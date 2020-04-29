@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#215354</color>
+    <color name="colorPrimaryDark">#0b2c33</color>
+    <color name="colorAccent">#ece113</color>
+
+    <color name="colorPrimaryLight">#191919</color>
+    <color name="buttonStateActivated">#ffffff</color>
+    <color name="hintTextColor">#FF0000</color>
+    <color name="background">#215354</color>
+    <color name="floating_button_back_tint">#0b2c33</color>
+    <color name="text_up_field_color">#ece113</color>
+    <color name="white_color">#ffffff</color>
+    <color name="divider_color">#0b2c33</color>
+</resources>
